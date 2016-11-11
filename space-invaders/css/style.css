@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+body {
+  background-image: url("https://66.media.tumblr.com/af1bc2c594c42d72a921737e5b65bd0e/tumblr_ny1pc9lOd31tljjduo1_500.png");
+  font-family: 'Press Start 2P';
+
+}
+
+.game {
+  width: 100vhx;
+  height: 100vh;
+  border: 0px white solid;
+}
+
+.titleClass {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#startButton {
+  width: 200px;
+  height: 100px;
+  background-color: black;
+  border: 0px black solid;
+  font-family: "Press Start 2P";
+  font-size: 50px;
+  color: white;
+  transition-duration: 0.25s;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#startButton:hover {
+  color: #00FF03;
+}
+
+.displayText {
+  font-family: "Press Start 2P";
+  font-size: 25px;
+  color: white;
+}
+
+.scoreField {
+  width: 200px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+}
+
+.livesField {
+  left: 15px;
+  bottom: -20px;
+  width: 350px;
+  height: 50px;
+  position: absolute;
+}
+
+.creditField {
+  right: 15px;
+  bottom: -20px;
+  width: 250px;
+  height: 50px;
+  position: absolute;
+}
+
+.floor {
+  position: absolute;
+  width: 1880px;
+  height: 0px;
+  border: 2.5px white solid;
+  /*#00FF03*/
+  left: 10px;
+  bottom: 50px;
+}
+
+
+/* .floorBoard {
+  position: absolute;
+  width: 2000px;
+  height: 70px;
+  background-color: black;
+  left: 0px;
+  bottom: 0px;
+} */
+
+.bunkerBlock {
+  /* size of block should be 5 or 10. (3x3)x5=45 */
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+
+#bunker1 {
+  bottom: 125px;
+  left: 200px;
+}
+
+#bunker2 {
+  bottom: 125px;
+  left: 600px;
+}
+
+#bunker3 {
+  bottom: 125px;
+  right: 600px;
+}
+
+#bunker4 {
+  bottom: 125px;
+  right: 200px;
+}
+
+#playerSprite {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 950px;
+  bottom: 55px;
+/*   background-color: red; */
+}
+
+.Swarm {
+  height: 50px;
+  width: 36.3%;
+  margin-top: 5px;
+  position: relative;
+}
+
+.Invader {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  /*   left: 0px;
+  top: 75px; */
+  position: relative;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.typeA {
+  width: 50px;
+  height: 50px;
+}
+
+.typeB {
+  width: 50px;
+  height: 50px;
+}
+
+.typeC {
+  width: 50px;
+  height: 50px;
+}

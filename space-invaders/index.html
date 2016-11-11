@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Space Invaders</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="game">
+  <div class="titleClass">
+    <img src="https://i.ytimg.com/vi/k9oyDTR0EwQ/maxresdefault.jpg" id="title" width="500">
+    <button id="startButton" type="button" onclick="Play()">PLAY</button>
+  </div>
+
+  <div class="displayText">
+
+    <div class="scoreField">
+      <span class="scoreText">SCORE<1></span>
+      <span class="scoreText" id="scorePlayer">00000</span>
+    </div>
+
+    <div class="livesField">
+      <span class="livesText" id="livesPlayer">(3)(LIVES)</span>
+    </div>
+
+    <div class="creditField">
+      <span class="creditText" id="creditPlayer">CREDIT(01)</span>
+    </div>
+
+    <div class="floor">
+    </div>
+
+    <div class="floorBoard">
+    </div>
+
+    <div class="bunkerBlocks">
+      <div class="bunkerBlock" id="bunker1"></div>
+      <div class="bunkerBlock" id="bunker2"></div>
+      <div class="bunkerBlock" id="bunker3"></div>
+      <div class="bunkerBlock" id="bunker4"></div>
+    </div>
+
+    <div class="Player" onload="gameLoop()" onkeydown="" onkeyup="">
+      <img id="playerSprite" src="https://lh3.googleusercontent.com/-iBsL32-1TTk/AAAAAAAAAAI/AAAAAAAAAAA/DZpZolx56IA/photo.jpg" style="position:absolute;" height="15" width="15">
+    </div>
+
+    <!--row 1-->
+    <div class="Swarm">
+      <div class="Invader" id="InvaderA1">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA"></div>
+
+      <div class="Invader" id="InvaderA2">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA3">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA4">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA5">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA6">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA7">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA8">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA9">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA10">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+
+      <div class="Invader" id="InvaderA11">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeA">
+      </div>
+    </div>
+
+    <!-- INVADER LINE TWO (B) -->
+    <div class="Swarm">
+      <div class="Invader" id="InvaderB1">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB"></div>
+
+      <div class="Invader" id="InvaderB2">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB3">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB4">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB5">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB6">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB7">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB8">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB9">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB10">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderB11">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+    </div>
+
+    <!-- INVADER LINE THREE (B) -->
+    <div class="Swarm">
+      <div class="Invader" id="InvaderC1">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB"></div>
+
+      <div class="Invader" id="InvaderC2">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC3">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC4">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC5">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC6">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC7">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC8">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC9">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC10">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderC11">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+    </div>
+
+
+    <!-- INVADER LINE FOUR (C) -->
+    <div class="Swarm">
+      <div class="Invader" id="InvaderD1">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC"></div>
+
+      <div class="Invader" id="InvaderD2">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderD3">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderD4">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderD5">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderD6">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderD7">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderD8">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderD9">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderD10">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderD11">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+    </div>
+
+
+    <!-- INVADER LINE FIVE (C) -->
+    <div class="Swarm">
+      <div class="Invader" id="InvaderE1">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC"></div>
+
+      <div class="Invader" id="InvaderE2">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderE3">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderE4">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderE5">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderE6">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeB">
+      </div>
+
+      <div class="Invader" id="InvaderE7">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderE8">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderE9">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderE10">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+      <div class="Invader" id="InvaderE11">
+        <img src="https://stillhart.biz/project/spaceInvaders/invader.gif" class="typeC">
+      </div>
+
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
